@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="style.css">
+  <title>todo liste</title>
+
+</head>
+
+<body>
+  <div class="grandDiv">
+
+    <div class="div1 ">
+      <div class="tache">
+        <h2 class="text  ">Ajouter une tache</h2>
+      </div>
+      <br>
+
+      <div class=" divInput  form-group">
+        <select class="form-control form-control-lg border border-success mb-2" id="inputCategorie" type="text"
+          aria-label=".form-select-lg example">
+          <option style="color: #ccc6c6" disabled selected>Categorie</option>
+          <option value="Academique">Academique</option>
+          <option value="Exta-Academique">Exta-Academique</option>
+          <option value="Distraction">Distraction</option>
+        </select>
+        <br>
+        <input class=" form-control form-control-lg border border-success mb-2" id="inputTitre" type="text"
+          placeholder="Titre" aria-label=".form-control-lg example">
+        <p class="d-none  error " id="erreur">
+          veuillez remplie se champs
+        </p>
+        <br>
+        <input type="date" class="form-control  border border-success mb-2 " id="inputDate">
+        <br>
+        <textarea class="form-control border border-success mb-2" id="inputDescription" type="text"
+          placeholder="Description" aria-label=".form-control-lg example" rows="3"></textarea>
+        <br><br>
+        <select class="form-control form-control-lg border border-success mb-2" id="inputStatut" type="text"
+          aria-label=".form-select-lg example">
+          <p class="d-none  error " id="erreur">
+            veuillez remplie se champs
+          </p>
+          <option style="color: #ccc6c6" disabled selected>Statut</option>
+          <option value="Nouveau">Nouveau</option>
+          <option value="En-cours">En cours</option>
+          <option value="Terminer">Terminé</option>
+        </select>
+      </div>
+
+      <div class="d-flex justify-content-center">
+        <button id="btnAjouter" type="button" class=" ajouter btn-lg btn-outline p-3 ">Ajouter</button>
+        <button onclick="modifierBtn()" id="btnModifier" type="button" class="btn btn-outline d-none">Update
+          Expense</button>
+      </div>
+      <div class="borders1"></div>
+      <br>
+      <h2 class="description">Statut</h2>
+      <div class=" graphe mt-5 w-50 mx-auto">
+        <canvas id="myChart"></canvas>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+      </div>
+    </div>
+
+    <div class="div2 ">
+      <div class="ListTach ">
+        <h3 class="ListeTache">Liste des taches</h3>
+      </div>
+      <div id="divDnotification" class="petitDivMiseAjours d-none">
+        <h2 id="titreDnotification" class="ajoutDlTache">Ajout de la tache</h2>
+        <p id="paragrapDnotification" class="enregistrement">l'enregistrement s'est effectué avec succes</p>
+      </div>
+
+      <div class="table-responsive mt-3" style=" height: 40rem;">
+        <table class="strideTr table text-center d-sm-table d-md-table table-borderless " style="border: 2px solid #74c6bd ;"
+          id="table1">
+
+          <head>
+            <tr style="background-color: #69a8a9;" class="mb-3 text-white fs-5 ">
+              <th class="p-4" scope="col">#</th>
+              <th class="p-4" cope="col">Date</th>
+              <th class="p-4" scope="col">Titre</th>
+              <th class="p-4" scope="col">Categorie</th>
+              <th class="p-4" scope="col">Operation</th>
+            </tr>
+          </head>
+          <tbody class="tbody">
+            <tr class="table-row">
+
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div id="divTableCacher" class="d-none">
+        <h5 class="text-center text-white p-2" style="background-color: #69a8a9;">Information tâche</h5>
+        <table class="w-100">
+          <tbody class="tableCacher" id="trTableCacher">
+          
+          </tbody>
+        </table>
+      </div>
+
+
+
+      <hr>
+      <br><br>
+      <h2 class="description">Description</h2>
+      <br><br>
+      <input type="text" id="inputHistorique" class="form-control text-center" aria-describedby="passwordHelpBlock">
+    </div>
+  </div>
+
+
+
+
+
+
+  <script src="chart.umd.min.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>
