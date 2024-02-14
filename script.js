@@ -185,7 +185,7 @@ function deleteTache(index) {
 
   updateTabExpense();
   displayTache();
-
+//=================================pour Suppression de tâche
   let titreN = 'Suppression de tâche'
   let descriptionN = 'tâche supprimée avec succès '
   notification(titreN, descriptionN)
@@ -240,13 +240,13 @@ function modifierBtn() {
 
   updateTabExpense();
   displayTache();
-
+//=================================pour nouvelle mise a jour des taches
   let titreN = 'Mise à jours de tâche'
   let descriptionN = 'Mise à jours  avec succès '
   notification(titreN, descriptionN)
 
 };
-
+//======================================pour les notification
 function notification(titre, description) {
   divDnotification.classList.remove('d-none');
   titreDnotification.innerText = titre;
