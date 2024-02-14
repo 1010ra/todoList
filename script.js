@@ -245,29 +245,6 @@ function modifierBtn() {
   let descriptionN = 'Mise à jours  avec succès '
   notification(titreN, descriptionN)
 
-  // let indexModifier = tabExpense.indexOf(modifierTache);
-  // if (indexModifier === -1) {
-  //   return;
-  // }
-  // let tab = tabExpense[indexModifier];
-  // let existTache = tabExpense.find(tache => tache.value === editTache.modifierTache);
-  // if (inputCategorie.value === "" || inputTitre.value === "" || inputDate.value === "" || inputDescription.value === "" || inputStatut.value === "") {
-  //   erreur.classList.remove("d-none");
-  //   setTimeout(() => {
-  //     erreur.classList.add("d-none");
-  //   }, 2000);
-  //   return;
-  // } else if (existTache) {
-  //   if (indexModifier === tab.index) {
-  //     categories.splice(indexModifier, 1);
-  //     titres.splice(indexModifier, 1);
-  //     dates.splice(indexModifier, 1);
-  //     descriptions.splice(indexModifier, 1);
-  //     statuts.splice(indexModifier, 1);
-  //     updateTabExpense();
-  //     displayTache();
-  //   }
-  // }
 };
 
 function notification(titre, description) {
